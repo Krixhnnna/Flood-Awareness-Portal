@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Awareness Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Flood Awareness Portal</h1>
+    </div>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Flood Risk Maps.html">Flood Risk Maps</a>
+            <a href="flood_alerts.html">Flood Alerts</a>
+            <a href="safety_tips.html">Safety Tips</a>
+            <a href="emergency_contacts.html">Emergency Contacts</a>
+        </div>
+    </nav>
+</header>
+
+
+<a href="Flood Risk Maps.html"> <img src="risk.jpg" class="risk"></a>
+
+<main>
+    <!-- Image Slider Section -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://www.cdc.gov/floods/media/images/reenteringyourfloodedhome.jpg" alt="Flood Image 1">
+            </div>
+            <div class="slide">
+                <img src="https://www.postcrescent.com/gcdn/authoring/authoring-images/2024/07/05/PAPN/74312976007-apc-flooding-0705240292-djp.jpg?crop=4102,2308,x0,y238&width=660&height=372&format=pjpg&auto=webp" alt="Flood Image 2">
+            </div>
+            <div class="slide">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/img-6489-1.JPG?q=w_1110,c_fill/f_webp" alt="Flood Image 3">
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="button" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="button" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+
+   
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            if (slideIndex >= totalSlides) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = totalSlides - 1; }
+            slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+            slideIndex++;
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+        
+        showSlides();
+    </script>
+    
+    
+    <!-- Flood Statistics with Animated Charts -->
+    <section>
+        <!-- About Floods Section -->
+    
+            <h1 class="headingsafety">Understanding Floods</h2>
+            <p>A flood is an overflow of water that submerges land that is usually dry. Floods can occur for a variety of reasons and vary in size from a small local flood to a large-scale flood that can affect entire cities or regions. The impact of floods on communities, ecosystems, and economies can be severe, making it essential to understand their causes and how they develop.</p>
+            
+            <h2 class="headingsafety">Types of Floods</h2>
+        <p>There are several types of floods, each with its causes and characteristics:</p>
+        <ul>
+            <li><strong>River Flooding:</strong> Occurs when rivers or streams overflow their banks due to prolonged heavy rain or snowmelt. River floods can cover large areas and may last for several days.</li>
+            <li><strong>Coastal Flooding:</strong> Caused by the rising of sea levels due to storms, high tides, or tsunamis. Coastal areas are at a higher risk due to their proximity to the ocean.</li>
+            <li><strong>Urban Flooding:</strong> Common in cities where the drainage systems become overwhelmed with rainwater. This can occur quickly in areas with poor infrastructure or compacted urban environments.</li>
+            <li><strong>Flash Flooding:</strong> A sudden and intense flood that happens within six hours of heavy rainfall or other causes like dam breaks. Flash floods are particularly dangerous due to their rapid onset.</li>
+        </ul>
+
+        <h2 class="headingsafety">Causes of Flooding</h2>
+        <p>Flooding is primarily caused by the following natural and human-induced factors:</p>
+        <ul>
+            <li><strong>Heavy Rainfall:</strong> Excessive rainfall over a short period of time can quickly overwhelm drainage systems and natural water channels, leading to floods.</li>
+            <li><strong>Snowmelt:</strong> When snow melts rapidly during warmer temperatures, the water may not be able to drain away fast enough, causing rivers and streams to overflow.</li>
+            <li><strong>Deforestation:</strong> The removal of trees and vegetation reduces the land's ability to absorb water, leading to increased runoff and a higher chance of flooding.</li>
+            <li><strong>Urbanization:</strong> Paved surfaces like roads, buildings, and parking lots prevent water from soaking into the ground, causing more water to flow over the surface and increase flood risk.</li>
+            <li><strong>Climate Change:</strong> Rising temperatures contribute to more frequent and intense rainfall events, increasing the likelihood of flooding in many regions. Sea-level rise also exacerbates coastal flooding.</li>
+        </ul>
+        
+        <h2 class="headingsafety">How Floods Develop</h2>
+        <p>Flooding usually follows a sequence of events. Here's how floods typically develop:</p>
+        <ol>
+            <li>Excessive rainfall or snowmelt leads to an increased volume of water in rivers, lakes, or streams.</li>
+            <li>Water levels rise beyond the capacity of the natural or artificial barriers, such as riverbanks or dams.</li>
+            <li>The floodwaters begin to overflow and spread to surrounding areas, submerging land and causing damage to property, infrastructure, and ecosystems.</li>
+            <li>Floodwaters may linger for days or weeks, depending on the severity and the ability of the environment to drain or absorb the water.</li>
+        </ol>
+
+        <h2 class="headingsafety">Impact of Floods</h2>
+        <p>Floods have both immediate and long-term effects. In addition to the physical destruction of homes and infrastructure, floods can disrupt economies, agriculture, and ecosystems. Some of the primary impacts include:</p>
+        <ul>
+            <li><strong>Loss of Life and Injury:</strong> Floods can cause fatalities, particularly in areas where people are unable to evacuate or are trapped by rising waters.</li>
+            <li><strong>Property Damage:</strong> Homes, roads, bridges, and businesses can be destroyed by floodwaters, resulting in significant financial losses.</li>
+            <li><strong>Displacement of People:</strong> Communities may need to be evacuated and temporarily relocated, leading to long-term social and economic strain.</li>
+            <li><strong>Environmental Damage:</strong> Floods can contaminate water supplies, damage wildlife habitats, and disrupt agriculture, making recovery more challenging.</li>
+        </ul>
+
+        <h2 class="headingsafety">Floods in History</h2>
+        <p>Flooding has been a part of human history for centuries. Notable historical floods include:</p>
+        <ul>
+            <li><strong>The 1931 China Floods:</strong> Considered one of the deadliest floods in history, it is estimated that between 1 million to 4 million people died due to flooding, hunger, and disease.</li>
+            <li><strong>The 2010 Pakistan Floods:</strong> Floods caused by monsoon rains affected over 20 million people, with widespread damage to infrastructure and agriculture.</li>
+            <li><strong>The 2019 Hurricane Dorian Flooding:</strong> In the Bahamas, Hurricane Dorian brought severe flooding, causing widespread damage and loss of life.</li>
+        </ul>
+        <h1 class="headingsafety"> Flood Statistics in India</h1>
+        
+            <p>In India, there have been numerous instances of flooding in recent years, impacting millions. In 2023, over 100 districts were affected by floods, with an estimated 5 million people displaced.</p>
+        
+        <div class="chart-container">
+            <canvas id="displacementChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="affectedDistrictsChart"></canvas>
+        </div>
+
+    
+</main>
+
+<footer>
+    <p>&copy; 2024 Flood Awareness Portal</p>
+</footer>
+
+<script>
+    // Data for the displacement chart
+    const displacementCtx = document.getElementById('displacementChart').getContext('2d');
+    const displacementChart = new Chart(displacementCtx, {
+        type: 'line',
+        data: {
+            labels: ['2019', '2020', '2021', '2022', '2023'],
+            datasets: [{
+                label: 'Annual Flood-Related Displacement (in millions)',
+                data: [3.2, 4.1, 4.5, 5.0, 5.8],
+                borderColor: 'rgba(255, 99, 132, 0.8)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderWidth: 2,
+                pointBackgroundColor: '#fff',
+                pointBorderColor: 'rgba(255, 99, 132, 1)',
+                pointHoverRadius: 7,
+                pointHoverBackgroundColor: '#ff6384',
+            }]
+        },
+        options: {
+            animation: {
+                duration: 2000,
+                easing: 'easeOutBounce'
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'rgba(255, 255, 255, 0.8)',
+                    }
+                }
+            }
+        }
+    });
+
+    // Data for the affected districts chart
+    const affectedDistrictsCtx = document.getElementById('affectedDistrictsChart').getContext('2d');
+    const affectedDistrictsChart = new Chart(affectedDistrictsCtx, {
+        type: 'bar',
+        data: {
+            labels: ['2019', '2020', '2021', '2022', '2023'],
+            datasets: [{
+                label: 'Districts Affected by Floods',
+                data: [78, 89, 92, 105, 112],
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            animation: {
+                duration: 2000,
+                easing: 'easeInOutQuad'
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'rgba(255, 255, 255, 0.8)',
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+
+
+<style>
+    /* Style for Chart Section */
+    .chart-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 2em auto;
+    }
+
+    /* Custom glowing effect for charts */
+    canvas {
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    }
+
+</style>
+
+</body>
+</html>
